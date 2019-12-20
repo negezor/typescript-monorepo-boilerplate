@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"noEmit": true,
+		"baseUrl": ".",
+		"paths": {
+			"@template/*": [
+				"./shared/*/src",
+				"./services/*/src"
+			]
+		}
+	}
+}
