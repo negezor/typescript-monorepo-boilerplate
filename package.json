@@ -10,6 +10,10 @@
 		"typescript": "^3.7.3"
 	},
 	"scripts": {
+		"build": "yarn run typescript:build",
+		"watch": "yarn run typescript:watch",
+		"typescript:build": "tsc --build ./tsconfig.project.json",
+		"typescript:watch": "yarn run typescript:build --watch",
 		"update:tsconfig": "ts-node scripts/update-package-tsconfig.ts"
 	}
 }
