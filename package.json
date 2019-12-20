@@ -18,6 +18,8 @@
 		"build": "yarn run typescript:build",
 		"watch": "yarn run typescript:watch",
 		"clean": "yarn run typescript:clean",
+		"test": "yarn run test:eslint",
+		"test:eslint": "eslint --ignore-path .gitignore {services,shared}/*/src/**/*.ts",
 		"typescript:build": "tsc --build ./tsconfig.project.json",
 		"typescript:watch": "yarn run typescript:build --watch",
 		"typescript:clean": "rm -rf ./{services,shared}/*/{lib,*.tsbuildinfo}",
