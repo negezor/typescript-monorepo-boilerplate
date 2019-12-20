@@ -37,5 +37,13 @@
 		}],
 		"indent": "off",
 		"semi": "off"
-	}
+	},
+	"overrides": [
+		{
+			"files": ["{services,shared}/*/test/**/*.ts"],
+			"env": {
+				"jest": true
+			}
+		}
+	]
 }
