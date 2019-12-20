@@ -3,10 +3,10 @@
 	"files": [],
 	"references": [
 		{
-			"path": "shared/shared-template/tsconfig.project.json"
+			"path": "shared/shared-template/tsconfig.package.json"
 		},
 		{
-			"path": "services/service-template/tsconfig.project.json"
+			"path": "services/service-template/tsconfig.package.json"
 		}
 	]
 }
