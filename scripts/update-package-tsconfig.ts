@@ -26,11 +26,11 @@ interface IPackageJSON {
 	peerDependencies: Record<string, string>;
 }
 
-const readJSON = <T>(path: string): T => {
-	return JSON.parse(
+const readJSON = <T>(path: string): T => (
+	JSON.parse(
 		readFileSync(path, 'utf8')
-	);
-}
+	)
+);
 
 const rootPath = pathJoin(__dirname, '..');
 
@@ -134,7 +134,7 @@ for (const [packageName, packagePath] of packagePathMap.entries()) {
 		})
 	};
 
-	writeFileSync(tsconfigPath, TSCONFIG_HEADER + JSON.stringify(tsconfigData, undefined, '\t'))
+	writeFileSync(tsconfigPath, TSCONFIG_HEADER + JSON.stringify(tsconfigData, undefined, '\t'));
 }
 
 const tsconfigProjectPath = pathJoin(rootPath, ConfigFilename.PROJECT_TSCONFIG);
@@ -154,4 +154,4 @@ const tsconfigProjectData = {
 		})
 };
 
-writeFileSync(tsconfigProjectPath, TSCONFIG_HEADER + JSON.stringify(tsconfigProjectData, undefined, '\t'))
+writeFileSync(tsconfigProjectPath, TSCONFIG_HEADER + JSON.stringify(tsconfigProjectData, undefined, '\t'));
