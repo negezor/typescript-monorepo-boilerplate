@@ -8,5 +8,8 @@
 		"@types/node": "^12.12.21",
 		"ts-node": "^8.5.4",
 		"typescript": "^3.7.3"
+	},
+	"scripts": {
+		"update:tsconfig": "ts-node scripts/update-package-tsconfig.ts"
 	}
 }
