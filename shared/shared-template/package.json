@@ -11,5 +11,8 @@
 	},
 	"peerDependencies": {
 
+	},
+	"scripts": {
+		"build": "tsc --build ./tsconfig.package.json"
 	}
 }
