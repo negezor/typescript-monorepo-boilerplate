@@ -1,4 +1,4 @@
-# Typescript Monorepo Boilerplate 🌟
+# TypeScript Monorepo Boilerplate 🌟
 Monorepo using native TypeScript compiler instead of external bundle collectors
 
 ## Usage
