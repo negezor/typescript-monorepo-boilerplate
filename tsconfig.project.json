@@ -1,0 +1,12 @@
+// File generated automatically, use yarn update:tsconfig for update
+{
+	"files": [],
+	"references": [
+		{
+			"path": "shared/shared-template/tsconfig.project.json"
+		},
+		{
+			"path": "services/service-template/tsconfig.project.json"
+		}
+	]
+}
