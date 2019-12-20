@@ -1,0 +1,41 @@
+{
+	"env": {
+		"node": true
+	},
+	"extends": [
+		"airbnb-base",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"plugins": [
+		"import",
+		"@typescript-eslint"
+	],
+	"rules": {
+		"@typescript-eslint/interface-name-prefix": ["error", "always"],
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/indent": ["error", "tab"],
+		"@typescript-eslint/ban-ts-ignore": "off",
+		"@typescript-eslint/semi": ["error"],
+		"no-restricted-syntax": ["error", "WithStatement"],
+		"comma-dangle": ["error", "never"],
+		"no-param-reassign": ["error", {
+			"props": false
+		}],
+		"no-dupe-class-members": "off",
+		"no-await-in-loop": "off",
+		"arrow-parens": "off",
+		"no-continue": "off",
+		"no-tabs": ["error", {
+			"allowIndentationTabs": true
+		}],
+		"indent": "off",
+		"semi": "off"
+	}
+}
