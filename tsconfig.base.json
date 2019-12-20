@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}
