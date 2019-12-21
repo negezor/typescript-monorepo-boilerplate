@@ -32,6 +32,10 @@ const readJSON = <T>(path: string): T => (
 	)
 );
 
+const writeTsconfig = <T>(path: string, data: T): void => {
+	writeFileSync(path, TSCONFIG_HEADER + JSON.stringify(data, undefined, '\t'));
+};
+
 const rootPath = pathJoin(__dirname, '..');
 
 const rootPackage = readJSON<IPackageJSON>(
@@ -134,7 +138,7 @@ for (const [packageName, packagePath] of packagePathMap.entries()) {
 		})
 	};
 
-	writeFileSync(tsconfigPath, TSCONFIG_HEADER + JSON.stringify(tsconfigData, undefined, '\t'));
+	writeTsconfig(tsconfigPath, tsconfigData);
 }
 
 const tsconfigProjectPath = pathJoin(rootPath, ConfigFilename.PROJECT_TSCONFIG);
@@ -154,4 +158,4 @@ const tsconfigProjectData = {
 		})
 };
 
-writeFileSync(tsconfigProjectPath, TSCONFIG_HEADER + JSON.stringify(tsconfigProjectData, undefined, '\t'));
+writeTsconfig(tsconfigProjectPath, tsconfigProjectData);
