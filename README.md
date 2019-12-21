@@ -17,7 +17,7 @@ yarn build
 - In `tsconfig.json`, change the `paths` from `@template` to the one you need
 
 #### Add or remove packages folder
-- In `package.json`, change `workspaces`
+- In `package.json`, change `workspaces` and path in scripts `test:eslint` & `typescript:clean`
 - In `tsconfig.json`, change the `paths`
 - In `.gitignore`, change the `# Build` place
 - In `jest.config.json`, change the `testMatch` pattern
