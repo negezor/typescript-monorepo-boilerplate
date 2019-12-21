@@ -58,8 +58,8 @@ const packageDirectories = workspacePaths
 		lstatSync(packageDirectory).isDirectory()
 	));
 
-const packagePathMap: Map<string, string> = new Map();
-const packageJSONMap: Map<string, IPackageJSON> = new Map();
+const packagePathMap = new Map<string, string>();
+const packageJSONMap = new Map<string, IPackageJSON>();
 
 for (const packageDirectory of packageDirectories) {
 	const packageJSON = readJSON<IPackageJSON>(
@@ -72,7 +72,7 @@ for (const packageDirectory of packageDirectories) {
 	packageJSONMap.set(packageName, packageJSON);
 }
 
-const internalDependencyMap: Map<string, string[]> = new Map();
+const internalDependencyMap = new Map<string, string[]>();
 
 for (const [packageName, packageJSON] of packageJSONMap.entries()) {
 	const allDependencies = [
