@@ -12,6 +12,18 @@ yarn install
 yarn build
 ```
 
+### Configuration
+#### Change namespace name
+- In `tsconfig.json`, change the `paths` from `@template` to the one you need
+
+#### Add or remove packages folder
+- In `package.json`, change `workspaces`
+- In `tsconfig.json`, change the `paths`
+- In `.gitignore`, change the `# Build` place
+- In `jest.config.json`, change the `testMatch` pattern
+- In `.eslintrc.json`, change the `overrides` pattern for tests
+- Run `yarn run update:tsconfig` for update tsconfig references
+
 ### Add new package
 - Copy template structure
 - Run `yarn run update:tsconfig` for update tsconfig references
