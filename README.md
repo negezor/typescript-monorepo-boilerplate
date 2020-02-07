@@ -34,6 +34,16 @@ yarn build
 - Add to `package.json` dependency in `peerDependencies`
 - Run `yarn run update:tsconfig` for update tsconfig references
 
+### Parsing error: "parserOptions.project"
+If you see this error, then eslint does not include your files in linting, you can add your files in `tsconfig.eslint.json`. 
+
+The full error looks something like this:: 
+```
+Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
+The file does not match your project config: path/to/file.
+The file must be included in at least one of the projects provided.
+```
+
 ### Scripts
 
 `yarn run build`
