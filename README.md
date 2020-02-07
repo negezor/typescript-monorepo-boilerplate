@@ -15,6 +15,7 @@ yarn build
 ### Configuration
 #### Change namespace name
 - In `tsconfig.json`, change the `paths` from `@template` to the one you need
+- Change the namespace in the `name` property of the` package.json` file of each module
 
 #### Add or remove packages folder
 - In `package.json`, change `workspaces` and path in scripts `test:eslint` & `typescript:clean`
