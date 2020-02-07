@@ -51,13 +51,12 @@ const workspacePaths = rootPackage.workspaces
 	));
 
 const packageDirectories = workspacePaths
-	.map(workspacePath => (
+	.flatMap(workspacePath => (
 		readdirSync(workspacePath)
 			.map(packageDirectory => (
 				pathJoin(workspacePath, packageDirectory)
 			))
 	))
-	.flat()
 	.filter(packageDirectory => (
 		lstatSync(packageDirectory).isDirectory()
 	));
@@ -93,18 +92,14 @@ for (const [packageName, packageJSON] of packageJSONMap.entries()) {
 }
 
 const resolveInternalDependencies = (dependencies: string[]): string[] => (
-	[...new Set(
-		[
-			...dependencies
-				.map(dependency => {
-					const internalDependencies = internalDependencyMap.get(dependency)!;
+	[...new Set([
+		...dependencies.flatMap(dependency => {
+			const internalDependencies = internalDependencyMap.get(dependency)!;
 
-					return resolveInternalDependencies(internalDependencies);
-				})
-				.flat(Infinity),
-			...dependencies
-		]
-	)]
+			return resolveInternalDependencies(internalDependencies);
+		}),
+		...dependencies
+	])]
 );
 
 for (const [packageName, packagePath] of packagePathMap.entries()) {
