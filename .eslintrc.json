@@ -20,10 +20,19 @@
 		"@typescript-eslint"
 	],
 	"rules": {
-		"@typescript-eslint/interface-name-prefix": ["error", "always"],
 		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				"selector": "interface",
+				"format": ["PascalCase"],
+				"prefix": ["I"]
+			}
+		],
+		"@typescript-eslint/ban-ts-comment": ["error", {
+			"ts-ignore": false
+		}],
 		"@typescript-eslint/indent": ["error", "tab"],
-		"@typescript-eslint/ban-ts-ignore": "off",
 		"@typescript-eslint/semi": ["error"],
 		"no-restricted-syntax": ["error", "WithStatement"],
 		"comma-dangle": ["error", "never"],
