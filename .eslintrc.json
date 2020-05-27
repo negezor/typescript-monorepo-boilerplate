@@ -37,6 +37,7 @@
 		"import/prefer-default-export": "off",
 		"import/no-default-export": ["error"],
 		"no-restricted-syntax": ["error", "WithStatement"],
+		"linebreak-style": ["error", "unix"],
 		"comma-dangle": ["error", "never"],
 		"no-param-reassign": ["error", {
 			"props": false
