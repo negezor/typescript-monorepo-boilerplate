@@ -57,3 +57,9 @@ The file must be included in at least one of the projects provided.
 
 `yarn run clean`
 - Cleans the entire TypeScript assembly
+
+`yarn workspaces run build`
+- Run build in all packages. [More info](https://classic.yarnpkg.com/en/docs/cli/workspaces/)
+
+`yarn workspace @template/name run build`
+- Run build in specific package. [More info](https://classic.yarnpkg.com/en/docs/cli/workspace/)
