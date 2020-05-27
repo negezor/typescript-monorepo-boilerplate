@@ -34,6 +34,10 @@
 		}],
 		"@typescript-eslint/indent": ["error", "tab"],
 		"@typescript-eslint/semi": ["error"],
+		"import/extensions": ["error", "ignorePackages", {
+			"js": "never",
+			"ts": "never"
+		}],
 		"import/prefer-default-export": "off",
 		"import/no-default-export": ["error"],
 		"no-restricted-syntax": ["error", "WithStatement"],
