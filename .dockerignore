@@ -1,0 +1,6 @@
+.docker
+.git
+
+node_modules
+
+scripts
