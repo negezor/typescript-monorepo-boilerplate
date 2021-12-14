@@ -2,7 +2,7 @@
 Monorepo using native TypeScript compiler instead of external bundlers
 
 ## Usage
-> **[Yarn](http://npm.im/yarn) 1.22.10 or newer is required**
+> **[Yarn](http://npm.im/yarn) 1.22.17 or newer is required**
 
 ### Initialization
 ```
