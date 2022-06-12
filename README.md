@@ -18,7 +18,7 @@ yarn build
 - Change the namespace in the `name` property of the` package.json` file of each module
 
 #### Add or remove packages folder
-- In `package.json`, change `workspaces` and path in scripts `test:eslint` & `typescript:clean`
+- In `package.json`, change `workspaces` and path in scripts `lint:eslint` & `typescript:clean`
 - In `tsconfig.json`, change the `paths`
 - In `.gitignore`, change the `# Build` place
 - In `jest.config.json`, change the `testMatch` pattern
