@@ -1,9 +1,10 @@
 {
 	"private": true,
 	"workspaces": [
-		"services/*",
+        "services/*",
 		"shared/*"
 	],
+    "type": "module",
 	"devDependencies": {
 		"@types/jest": "^28.1.1",
 		"@types/node": "^17.0.42",
@@ -22,12 +23,12 @@
 		"watch": "npm run typescript:watch",
 		"clean": "npm run typescript:clean",
 		"test": "npm run lint:eslint && npm run test:jest",
-		"test:jest": "jest --config jest.config.json --no-cache",
+		"test:jest": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.json --no-cache",
 		"lint": "npm run lint:eslint",
 		"lint:eslint": "eslint --ignore-path .gitignore {services,shared}/*/src/**/*.ts",
 		"typescript:build": "tsc --build ./tsconfig.project.json",
 		"typescript:watch": "npm run typescript:build -- --watch",
 		"typescript:clean": "rm -rf ./{services,shared}/*/{lib,*.tsbuildinfo}",
-		"update:tsconfig": "ts-node scripts/update-package-tsconfig.ts"
+		"update:tsconfig": "ts-node-esm scripts/update-package-tsconfig.ts"
 	}
 }

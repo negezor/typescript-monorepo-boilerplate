@@ -1,13 +1,14 @@
 import {
     join as pathJoin,
     relative as pathRelative
-} from 'path';
+} from 'node:path';
 import {
     writeFileSync,
     readFileSync,
     readdirSync,
     lstatSync
-} from 'fs';
+} from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 enum ConfigFilename {
     PACKAGE = 'package.json',
@@ -36,7 +37,7 @@ const writeTsconfig = <T>(path: string, data: T): void => {
     writeFileSync(path, TSCONFIG_HEADER + JSON.stringify(data, undefined, '\t'));
 };
 
-const rootPath = pathJoin(__dirname, '..');
+const rootPath = fileURLToPath(new URL('..', import.meta.url));
 
 const rootPackage = readJSON<IPackageJSON>(
     pathJoin(rootPath, ConfigFilename.PACKAGE)

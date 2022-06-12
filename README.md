@@ -1,5 +1,5 @@
-# TypeScript Monorepo Boilerplate 🌟
-Monorepo using native TypeScript compiler instead of external bundlers
+# TypeScript Monorepo Boilerplate
+> Pure ESM monorepo using native TypeScript compiler instead of external bundlers 🌟
 
 ### Requirements
 > **[Node.js](https://nodejs.org/) 18.3.0 or newer is required**

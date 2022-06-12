@@ -13,5 +13,9 @@
 		"test",
 		"lib"
 	],
-	"references": []
+	"references": [
+		{
+			"path": "../../shared/shared-template/tsconfig.package.json"
+		}
+	]
 }

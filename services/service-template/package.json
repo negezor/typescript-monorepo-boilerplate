@@ -2,8 +2,14 @@
 	"name": "@template/service-template",
 	"version": "0.0.0",
 	"private": true,
-	"main": "./lib/index.js",
-	"types": "./lib/index.d.ts",
+	"type": "module",
+    "main": "./lib/index.js",
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "types": "./lib/index.d.ts"
+        }
+    },
 	"dependencies": {
 
 	},
@@ -11,7 +17,7 @@
 
 	},
 	"peerDependencies": {
-
+        "@template/shared-template": "*"
 	},
 	"scripts": {
 		"build": "tsc --build ./tsconfig.package.json"
