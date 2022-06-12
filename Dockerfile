@@ -1,4 +1,4 @@
-FROM node:16.13.1-alpine3.14
+FROM node:18.3-alpine3.16
 
 RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2 \
 	# && apk add --no-cache libc6-compat
