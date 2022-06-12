@@ -1,4 +1,4 @@
-// File generated automatically, use yarn update:tsconfig for update
+// File generated automatically, use npm run update:tsconfig for update
 {
 	"files": [],
 	"references": [

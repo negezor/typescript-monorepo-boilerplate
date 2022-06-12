@@ -6,7 +6,7 @@ RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2 \
 
 WORKDIR /app
 
-COPY ["package.json", "yarn.lock", "./"]
+COPY ["package.json", "package-lock.json", "./"]
 
 # Shared
 COPY shared/shared-template/package.json shared/shared-template/
@@ -14,10 +14,10 @@ COPY shared/shared-template/package.json shared/shared-template/
 # Services
 COPY services/service-template/package.json services/service-template/
 
-RUN yarn install --pure-lockfile
+RUN npm ci
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 # Use docker-compose "command" instead of "CMD" here

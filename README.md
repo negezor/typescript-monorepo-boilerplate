@@ -1,15 +1,17 @@
 # TypeScript Monorepo Boilerplate 🌟
 Monorepo using native TypeScript compiler instead of external bundlers
 
-## Usage
-> **[Yarn](http://npm.im/yarn) 1.22.17 or newer is required**
+### Requirements
+> **[Node.js](https://nodejs.org/) 18.3.0 or newer is required**
+
+> **[NPM](http://npm.im/npm) 8.12.1 or newer is required**
 
 ### Initialization
 ```
 git clone git@github.com:negezor/typescript-monorepo-boilerplate.git
 cd typescript-monorepo-boilerplate
-yarn install
-yarn build
+npm install
+npm run build
 ```
 
 ### Configuration
@@ -23,16 +25,16 @@ yarn build
 - In `.gitignore`, change the `# Build` place
 - In `jest.config.json`, change the `testMatch` pattern
 - In `.eslintrc.json`, change the `overrides` pattern for tests
-- Run `yarn run update:tsconfig` for update tsconfig references
+- Run `npm run update:tsconfig` for update tsconfig references
 
 ### Add new package
 - Copy template structure
-- Run `yarn run update:tsconfig` for update tsconfig references
-- Run `yarn install` for create new symlinks in node_modules
+- Run `npm run update:tsconfig` for update tsconfig references
+- Run `npm install` for create new symlinks in node_modules
 
 ### Add internal dependency
 - Add to `package.json` dependency in `peerDependencies`
-- Run `yarn run update:tsconfig` for update tsconfig references
+- Run `npm run update:tsconfig` for update tsconfig references
 
 ### Parsing error: "parserOptions.project"
 If you see this error, then eslint does not include your files in linting, you can add your files in `tsconfig.eslint.json`. 
@@ -46,20 +48,20 @@ The file must be included in at least one of the projects provided.
 
 ### Scripts
 
-`yarn run build`
+`npm run build`
 - Starts the assembly of all packages in monorepo
 
-`yarn run watch`
+`npm run watch`
 - Waits for changes in each package and performs build. Used for development.
 
-`yarn run test`
+`npm run test`
 - Runs tests for packages
 
-`yarn run clean`
+`npm run clean`
 - Cleans the entire TypeScript assembly
 
-`yarn workspaces run build`
-- Run build in all packages. [More info](https://classic.yarnpkg.com/en/docs/cli/workspaces/)
+`npm run build --workspaces`
+- Run build in all packages. [More info](https://docs.npmjs.com/cli/v8/using-npm/workspaces)
 
-`yarn workspace @template/name run build`
-- Run build in specific package. [More info](https://classic.yarnpkg.com/en/docs/cli/workspace/)
+`npm run build --workspace=name`
+- Run build in specific package. [More info](https://docs.npmjs.com/cli/v8/using-npm/workspaces)

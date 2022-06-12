@@ -16,7 +16,7 @@ enum ConfigFilename {
 	PROJECT_TSCONFIG = 'tsconfig.project.json'
 }
 
-const TSCONFIG_HEADER = '// File generated automatically, use yarn update:tsconfig for update\n';
+const TSCONFIG_HEADER = '// File generated automatically, use npm run update:tsconfig for update\n';
 
 interface IPackageJSON {
 	name: string;
