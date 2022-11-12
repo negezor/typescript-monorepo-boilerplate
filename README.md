@@ -8,7 +8,7 @@
 
 ### Initialization
 ```
-git clone git@github.com:negezor/typescript-monorepo-boilerplate.git
+git clone https://github.com/negezor/typescript-monorepo-boilerplate.git
 cd typescript-monorepo-boilerplate
 npm install
 npm run build
