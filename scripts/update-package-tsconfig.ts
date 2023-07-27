@@ -1,12 +1,12 @@
 import {
     join as pathJoin,
-    relative as pathRelative
+    relative as pathRelative,
 } from 'node:path';
 import {
     writeFileSync,
     readFileSync,
     readdirSync,
-    lstatSync
+    lstatSync,
 } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -82,7 +82,7 @@ for (const [packageName, packageJSON] of packageJSONMap.entries()) {
     const allDependencies = [
         ...Object.keys(packageJSON.dependencies || {}),
         ...Object.keys(packageJSON.devDependencies || {}),
-        ...Object.keys(packageJSON.peerDependencies || {})
+        ...Object.keys(packageJSON.peerDependencies || {}),
     ];
 
     const internalDependencies = allDependencies.filter(dependencyName => (
@@ -99,7 +99,7 @@ const resolveInternalDependencies = (dependencies: string[]): string[] => (
 
             return resolveInternalDependencies(internalDependencies);
         }),
-        ...dependencies
+        ...dependencies,
     ])]
 );
 
@@ -118,7 +118,7 @@ for (const [packageName, packagePath] of packagePathMap.entries()) {
         compilerOptions: {
             outDir: './lib',
             rootDir: './src',
-            composite: true
+            composite: true,
         },
         include: ['src'],
         exclude: ['test', 'lib'],
@@ -129,9 +129,9 @@ for (const [packageName, packagePath] of packagePathMap.entries()) {
                 path: pathJoin(
                     pathRelative(packagePath, dependencyPath),
                     ConfigFilename.PACKAGE_TSCONFIG
-                )
+                ),
             };
-        })
+        }),
     };
 
     writeTsconfig(tsconfigPath, tsconfigData);
@@ -149,9 +149,9 @@ const tsconfigProjectData = {
                 path: pathJoin(
                     pathRelative(rootPath, dependencyPath),
                     ConfigFilename.PACKAGE_TSCONFIG
-                )
+                ),
             };
-        })
+        }),
 };
 
 writeTsconfig(tsconfigProjectPath, tsconfigProjectData);
