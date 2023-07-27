@@ -4,54 +4,35 @@
 		"node": true
 	},
 	"extends": [
-		"airbnb-base",
+		"eslint:recommended",
 		"plugin:import/errors",
 		"plugin:import/warnings",
 		"plugin:import/typescript",
-		"plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"project": "./tsconfig.eslint.json",
-		"sourceType": "module"
+        "sourceType": "module",
+		"project": true
 	},
 	"plugins": [
 		"import",
 		"@typescript-eslint"
 	],
 	"rules": {
-		"@typescript-eslint/no-non-null-assertion": "off",
-		"@typescript-eslint/naming-convention": [
-			"error",
-			{
-				"selector": "interface",
-				"format": ["PascalCase"],
-				"prefix": ["I"]
-			}
-		],
-		"@typescript-eslint/ban-ts-comment": ["error", {
-			"ts-ignore": false
-		}],
-		"@typescript-eslint/indent": ["error"],
-		"@typescript-eslint/semi": ["error"],
-		"import/extensions": ["error", "ignorePackages", {
-			"js": "never",
-			"ts": "never"
-		}],
-		"import/prefer-default-export": "off",
-		"import/no-default-export": ["error"],
-		"no-restricted-syntax": ["error", "WithStatement"],
-		"linebreak-style": ["error", "unix"],
-		"comma-dangle": ["error", "never"],
-		"no-param-reassign": ["error", {
-			"props": false
-		}],
-		"no-dupe-class-members": "off",
-		"no-await-in-loop": "off",
-		"arrow-parens": "off",
-		"no-continue": "off",
-		"indent": "off",
-		"semi": "off"
+		"@typescript-eslint/prefer-nullish-coalescing": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/unbound-method": "off",
+        "@typescript-eslint/semi": ["error"],
+        "comma-dangle": ["error", "always-multiline"],
+        "no-unused-vars": "off",
+        "no-undef": "off"
 	},
 	"overrides": [
 		{
