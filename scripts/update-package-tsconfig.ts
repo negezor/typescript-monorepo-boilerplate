@@ -34,7 +34,7 @@ const readJSON = <T>(path: string): T => (
 );
 
 const writeTsconfig = <T>(path: string, data: T): void => {
-    writeFileSync(path, TSCONFIG_HEADER + JSON.stringify(data, undefined, '\t'));
+    writeFileSync(path, TSCONFIG_HEADER + JSON.stringify(data, undefined, '    '));
 };
 
 const rootPath = fileURLToPath(new URL('..', import.meta.url));
