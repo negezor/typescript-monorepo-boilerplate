@@ -1,10 +1,10 @@
 {
-	"extends": "./tsconfig.json",
-	"include": [
-		"./**/*.ts"
-	],
-	"exclude": [
-		// Disable build
-		"./*/*/lib/**/*.ts"
-	]
+    "extends": "./tsconfig.json",
+    "include": [
+        "./**/*.ts"
+    ],
+    "exclude": [
+        // Disable build
+        "./*/*/lib/**/*.ts"
+    ]
 }

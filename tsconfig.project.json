@@ -1,12 +1,12 @@
 // File generated automatically, use npm run update:tsconfig for update
 {
-	"files": [],
-	"references": [
-		{
-			"path": "shared/shared-template/tsconfig.package.json"
-		},
-		{
-			"path": "services/service-template/tsconfig.package.json"
-		}
-	]
+    "files": [],
+    "references": [
+        {
+            "path": "shared/shared-template/tsconfig.package.json"
+        },
+        {
+            "path": "services/service-template/tsconfig.package.json"
+        }
+    ]
 }

@@ -1,9 +1,9 @@
 FROM node:20.5.0-bookworm-slim
 
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends\
+    && apt-get install -y --no-install-recommends\
         git \
-	&& rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

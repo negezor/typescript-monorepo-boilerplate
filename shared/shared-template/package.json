@@ -1,7 +1,7 @@
 {
-	"name": "@template/shared-template",
-	"version": "0.0.0",
-	"private": true,
+    "name": "@template/shared-template",
+    "version": "0.0.0",
+    "private": true,
     "type": "module",
     "main": "./lib/index.js",
     "exports": {
@@ -10,16 +10,16 @@
             "types": "./lib/index.d.ts"
         }
     },
-	"dependencies": {
+    "dependencies": {
 
-	},
-	"devDependencies": {
+    },
+    "devDependencies": {
 
-	},
-	"peerDependencies": {
+    },
+    "peerDependencies": {
 
-	},
-	"scripts": {
-		"build": "tsc --build ./tsconfig.package.json"
-	}
+    },
+    "scripts": {
+        "build": "tsc --build ./tsconfig.package.json"
+    }
 }

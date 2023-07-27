@@ -1,5 +1,5 @@
 describe('Service', (): void => {
-	it('template', (): void => {
-		expect(true).toEqual(true);
-	});
+    it('template', (): void => {
+        expect(true).toEqual(true);
+    });
 });

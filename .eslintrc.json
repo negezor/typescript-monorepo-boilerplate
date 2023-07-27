@@ -1,27 +1,27 @@
 {
-	"root": true,
-	"env": {
-		"node": true
-	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:import/errors",
-		"plugin:import/warnings",
-		"plugin:import/typescript",
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended-type-checked",
         "plugin:@typescript-eslint/stylistic-type-checked"
-	],
-	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
         "sourceType": "module",
-		"project": true
-	},
-	"plugins": [
-		"import",
-		"@typescript-eslint"
-	],
-	"rules": {
-		"@typescript-eslint/prefer-nullish-coalescing": "off",
+        "project": true
+    },
+    "plugins": [
+        "import",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/prefer-nullish-coalescing": "off",
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-argument": "off",
@@ -33,13 +33,13 @@
         "comma-dangle": ["error", "always-multiline"],
         "no-unused-vars": "off",
         "no-undef": "off"
-	},
-	"overrides": [
-		{
-			"files": ["{services,shared}/*/test/**/*.ts"],
-			"env": {
-				"jest": true
-			}
-		}
-	]
+    },
+    "overrides": [
+        {
+            "files": ["{services,shared}/*/test/**/*.ts"],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 }
