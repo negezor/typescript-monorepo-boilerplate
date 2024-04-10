@@ -59,3 +59,17 @@ npm run build
 
 `npm run build --workspace=name`
 - Run build in specific package. [More info](https://docs.npmjs.com/cli/v8/using-npm/workspaces)
+
+### FAQ
+
+#### Why not take Rollup/Esbuild/SWC?
+
+Because they are external dependencies, yes of course they can faster than the typescript compiler for a build. But we will still check types and it is trivially easier. It's worth noting that now we use tsx which depends on esbuild (will be replaced later with a simpler solution).
+
+#### Why Biome.js and not Eslint?
+
+It's very simple, eslint is very slow. Usually the rules that we often need are already available in Biome.js, and those that are not are probably will implemented in the next version. It is also worth noting that eslint pulls a lot of small dependencies, while Biome.js is 1 binary file for your platform, which is much faster when installing and updating dependencies. Also it provides a formatter out of the box, we don't need to install prettier separately.
+
+#### Why not Jest/Mocha?
+
+Because these are external dependencies, and `node:test` is available out of the box, plus it's faster. The only thing that may be missing is simpler expect comparison, but you can put a smaller module for that separately.
