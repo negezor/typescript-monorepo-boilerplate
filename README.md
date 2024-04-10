@@ -23,7 +23,6 @@ npm run build
 - In `package.json`, change `workspaces` and path in scripts `lint:biome` & `typescript:clean`
 - In `tsconfig.json`, change the `paths`
 - In `.gitignore`, change the `# Build` place
-- In `jest.config.json`, change the `testMatch` pattern
 - Run `npm run update:tsconfig` for update tsconfig references
 
 ### Add new package
