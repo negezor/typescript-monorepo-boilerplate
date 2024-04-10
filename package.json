@@ -8,7 +8,6 @@
     "devDependencies": {
         "@biomejs/biome": "^1.6.4",
         "@types/node": "^20.12.7",
-        "ts-node": "^10.9.2",
         "tsx": "^4.7.2",
         "typescript": "^5.4.5"
     },
@@ -24,6 +23,6 @@
         "typescript:build": "tsc --build ./tsconfig.project.json",
         "typescript:watch": "npm run typescript:build -- --watch",
         "typescript:clean": "rm -rf ./{services,shared}/*/{lib,*.tsbuildinfo}",
-        "update:tsconfig": "ts-node-esm scripts/update-package-tsconfig.ts"
+        "update:tsconfig": "tsx scripts/update-package-tsconfig.ts"
     }
 }
