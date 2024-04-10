@@ -20,6 +20,7 @@
         "test:node": "node --import tsx --test packages/*/test/*.test.ts",
         "lint": "npm run lint:biome",
         "lint:biome": "biome lint --apply {services,shared}/*/src",
+        "fmt": "biome format --apply {services,shared}/*/src",
         "typescript:build": "tsc --build ./tsconfig.project.json",
         "typescript:watch": "npm run typescript:build -- --watch",
         "typescript:clean": "rm -rf ./{services,shared}/*/{lib,*.tsbuildinfo}",
