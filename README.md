@@ -45,6 +45,12 @@ npm run build
 `npm run test`
 - Runs tests for packages
 
+`npm run lint`
+- Checks the code with the biome.js linter
+
+`npm run fmt`
+- Formats source code using biome.js
+
 `npm run clean`
 - Cleans the entire TypeScript assembly
 
