@@ -20,11 +20,10 @@ npm run build
 - Change the namespace in the `name` property of the` package.json` file of each module
 
 #### Add or remove packages folder
-- In `package.json`, change `workspaces` and path in scripts `lint:eslint` & `typescript:clean`
+- In `package.json`, change `workspaces` and path in scripts `lint:biome` & `typescript:clean`
 - In `tsconfig.json`, change the `paths`
 - In `.gitignore`, change the `# Build` place
 - In `jest.config.json`, change the `testMatch` pattern
-- In `.eslintrc.json`, change the `overrides` pattern for tests
 - Run `npm run update:tsconfig` for update tsconfig references
 
 ### Add new package
@@ -35,16 +34,6 @@ npm run build
 ### Add internal dependency
 - Add to `package.json` dependency in `peerDependencies`
 - Run `npm run update:tsconfig` for update tsconfig references
-
-### Parsing error: "parserOptions.project"
-If you see this error, then eslint does not include your files in linting, you can add your files in `tsconfig.eslint.json`. 
-
-The full error looks something like this:: 
-```
-Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
-The file does not match your project config: path/to/file.
-The file must be included in at least one of the projects provided.
-```
 
 ### Scripts
 
