@@ -2,9 +2,9 @@
 > Pure ESM monorepo using native TypeScript compiler instead of external bundlers 🌟
 
 ### Requirements
-> **[Node.js](https://nodejs.org/) 20.5.0 or newer is required**
+> **[Node.js](https://nodejs.org/) 20.12.2 or newer is required**
 
-> **[NPM](http://npm.im/npm) 9.8.1 or newer is required**
+> **[NPM](http://npm.im/npm) 10.5.1 or newer is required**
 
 ### Initialization
 ```
