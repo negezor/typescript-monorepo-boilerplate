@@ -1,5 +1,8 @@
-describe('Service', (): void => {
+import { describe, it } from 'node:test';
+import { strictEqual } from 'node:assert';
+
+describe('Shared', (): void => {
     it('template', (): void => {
-        expect(true).toEqual(true);
+        strictEqual(true, true);
     });
 });
