@@ -16,7 +16,7 @@
         "watch": "npm run typescript:watch",
         "clean": "npm run typescript:clean",
         "test": "npm run lint && npm run test:node",
-        "test:node": "node --import tsx --test packages/*/test/*.test.ts",
+        "test:node": "node --import tsx --test {services,shared}/*/test/*.test.ts",
         "lint": "npm run lint:biome",
         "lint:biome": "biome lint --apply {services,shared}/*/src",
         "fmt": "biome format --apply {services,shared}/*/src",
