@@ -37,7 +37,7 @@ npm run build
 ### Scripts
 
 `npm run build`
-- Starts the assembly of all packages in monorepo
+- Starts the build of all packages in monorepo
 
 `npm run watch`
 - Waits for changes in each package and performs build. Used for development.
@@ -52,7 +52,7 @@ npm run build
 - Formats source code using biome.js
 
 `npm run clean`
-- Cleans the entire TypeScript assembly
+- Cleans the entire TypeScript build cache
 
 `npm run build --workspaces`
 - Run build in all packages. [More info](https://docs.npmjs.com/cli/v8/using-npm/workspaces)
